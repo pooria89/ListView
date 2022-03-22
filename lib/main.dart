@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        primaryColor: Colors.lightBlue[800],
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Listtile'),
     );
   }
 }
@@ -31,7 +33,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    // final subtitles = ["i love pooria","pooria is thin","pooria is tall","pooria is good"];
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -41,34 +42,74 @@ class _MyHomePageState extends State<MyHomePage> {
         children: const [
           Card(
             child: ListTile(
-              title: Text('Pooria'),
-              leading: CircleAvatar(backgroundImage: AssetImage('asset/pooria2.jpg')),
+              title: Text(
+                'Pooria',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+              leading: CircleAvatar(
+                  backgroundImage: AssetImage('asset/pooria2.jpg'),radius: 40),
               trailing: Icon(Icons.star),
-              subtitle: Text('Pooria is a Developer'),
+              subtitle: Text('Pooria is a Developer',style: TextStyle(
+                color: Colors.grey,
+                fontSize: 13,
+              ),),
             ),
           ),
           Card(
             child: ListTile(
-              title: Text('Pooria'),
-              leading: CircleAvatar(backgroundImage: AssetImage('asset/pooria.jpg')),
+              title: Text(
+                'Saeed',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+              leading:
+                  CircleAvatar(backgroundImage: AssetImage('asset/pooria.jpg'),radius: 40),
               trailing: Icon(Icons.star),
-              subtitle: Text('Pooria is Smart'),
+              subtitle: Text('Pooria is Smart',style: TextStyle(
+                color: Colors.grey,
+                fontSize: 13,
+              )),
             ),
           ),
           Card(
             child: ListTile(
-              title: Text('Pooria'),
-              leading: CircleAvatar(backgroundImage: AssetImage('asset/pooria1.jpg')),
+              title: Text(
+                'Sadeq',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+              leading: CircleAvatar(
+                  backgroundImage: AssetImage('asset/pooria1.jpg'),radius: 40),
               trailing: Icon(Icons.star),
-              subtitle: Text('Pooria is a good boy'),
+              subtitle: Text('Pooria is a good boy',style: TextStyle(
+                color: Colors.grey,
+                fontSize: 13,
+              )),
             ),
           ),
           Card(
             child: ListTile(
-              title: Text('Pooria'),
-              leading: CircleAvatar(backgroundImage: AssetImage('asset/pooria3.jpg')),
+              title: Text(
+                'Alireza',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+              leading: CircleAvatar(
+                  backgroundImage: AssetImage('asset/pooria3.jpg'),radius: 40),
               trailing: Icon(Icons.star),
-              subtitle: Text('Pooria is thin'),
+              subtitle: Text('Pooria is thin',style: TextStyle(
+                color: Colors.grey,
+                fontSize: 13,
+              )),
             ),
           ),
         ],
